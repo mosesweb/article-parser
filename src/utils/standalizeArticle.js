@@ -33,9 +33,10 @@ module.exports = (htmlArticle, url) => {
     removeComments: true,
     removeEmptyElements: true,
     removeEmptyAttributes: true,
-    collapseWhitespace: true,
-    conservativeCollapse: false,
-    removeTagWhitespace: true,
+    collapseWhitespace: false,
+    conservativeCollapse: true,
+    removeTagWhitespace: false,
+    preserveLineBreaks: true
   });
 
   const cleanHtml = sanitize(minifiedHtml, getSanitizeHtmlOptions());
